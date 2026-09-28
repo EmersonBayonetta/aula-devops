@@ -7,12 +7,12 @@ on:
 
 jobs:
   validacao-estatica:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latess
     steps:
       - name: Checkout do código
         uses: actions/checkout@v4
 
-      - name: Verificar arquivos essenciais
+      - name: Verificar arquivos essenciais do projeto
         run: |
           test -f index.html && echo "HTML encontrado!"
           test -f style.css && echo "CSS encontrado!"
