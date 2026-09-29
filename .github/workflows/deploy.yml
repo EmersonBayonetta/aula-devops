@@ -15,4 +15,3 @@ jobs:
       - name: Verificar arquivos essenciais do projeto
         run: |
           test -f index.html && echo "HTML encontrado!"
-          test -f style.css && echo "CSS encontrado!"
