@@ -15,4 +15,8 @@ jobs:
       - name: Verificar arquivos essenciais do projeto
         run: |
           test -f index.html && echo "HTML encontrado!"
-          test -f style.css && echo "Folha de estilo encontrada"
+
+      - name: Validar sintaxe do HTML
+        uses: htmlhint/htmlhint-action@v2
+        with:
+          target_pattern: "index.html"
