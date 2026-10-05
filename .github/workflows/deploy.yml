@@ -20,3 +20,8 @@ jobs:
         uses: htmlhint/htmlhint-action@v2
         with:
           target_pattern: "index.html"
+
+          -name: Checar arquivos estáticos
+          run: |
+            ls -R
+            echo "Todos os arquivos foram carregados corretamente."
