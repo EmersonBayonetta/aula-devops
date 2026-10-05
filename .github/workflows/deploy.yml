@@ -9,16 +9,13 @@ jobs:
   validacao-estatica:
     runs-on: ubuntu-latest
     steps:
-      - name: Checar arquivos estaticos
-        run: |
-          ls -R
-          echo "Arquivos listados no Runner"
-
       - name: Checkout do codigo
         uses: actions/checkout@v3
 
-      - name : Validar sintaxe HTML
+      - name: Validar sintaxe HTML
         uses: Cyb3r-Jak3/html5validator-action@v7.2.0
         with:
-          target: './index.html'
+          root: .
 
+      - name: Listar arquivos do repositorio
+        run: ls -R
