@@ -9,7 +9,10 @@ jobs:
   validacao-estatica:
     runs-on: ubuntu-latest
     steps:
-      - name: Checar arquivos estáticos
+      - name: Checkout do codigo
+        uses: actions/checkout@v3
+
+      - name: Checar arquivos estaticos
         run: |
           ls -R
-          echo "Todos os arquivos foram carregados no Runner"
+          echo "Arquivos listados no Runner"
