@@ -9,10 +9,11 @@ jobs:
   validacao-estatica:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout do codigo
-        uses: actions/checkout@v3
-
       - name: Checar arquivos estaticos
         run: |
           ls -R
           echo "Arquivos listados no Runner"
+          
+      - name: Checkout do codigo
+        uses: actions/checkout@v3
+
