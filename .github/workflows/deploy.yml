@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout do codigo
-        uses: actions/checkout@v99
+        uses: actions/checkout@v3
 
       - name: Validar sintaxe HTML
         run: npx htmlhint index.html
